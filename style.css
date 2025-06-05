@@ -40,38 +40,40 @@ header {
 .photo-slideshow {
   flex: 1 1 40%;
   max-width: 400px;
+  height: 300px; /* Adjust as needed */
   position: relative;
   overflow: hidden;
   background: #fff;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  height: 300px; /* you can adjust height */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .slides-wrapper {
   width: 100%;
-  position: relative;
   height: 100%;
+  position: relative;
 }
 
 .slide {
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: none;
   transition: opacity 1s ease-in-out;
-  object-fit: cover;
+}
+
+.slide.active {
+  display: block;
 }
 
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  background: #fff; 
+  object-fit: cover; /* or contain if you want full image */
+  object-position: center top; /* tweak if needed */
   display: block;
-}
-
-
-.slide.active {
-  display: block;
+  background: #fff;
 }
 
 .bio {
