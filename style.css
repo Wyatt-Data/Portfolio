@@ -69,10 +69,10 @@ header {
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;          /* crop to fill */
-  object-position: center top; /* adjust crop focus */
+  object-fit: contain;
+  object-position: center;
   display: block;
-  background: #fff;
+  background-color: #fff;
 }
 
 /* Bio Section */
