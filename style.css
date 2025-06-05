@@ -115,6 +115,17 @@ header {
   font-size: 1.2rem;
 }
 
+/* Experience */
+.bottom-section {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.bottom-section ul {
+  list-style: disc inside;
+}
+
 /* Footer */
 footer {
   background: #222;
