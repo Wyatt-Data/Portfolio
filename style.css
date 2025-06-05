@@ -35,7 +35,7 @@ header {
 .photo-slideshow {
   flex: 1 1 40%;
   max-width: 400px;
-  height: 300px;
+  max-height: 300px;
   position: relative;
   overflow: hidden;
   background: #fff;
