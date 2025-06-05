@@ -12,4 +12,5 @@ function nextSlide() {
   showSlide(currentIndex);
 }
 
-setInterval(nextSlide, 4000); // Change image every 4 seconds
+// Start slideshow
+setInterval(nextSlide, 4000);
