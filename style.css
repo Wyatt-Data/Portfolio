@@ -203,22 +203,28 @@ footer a:hover {
 
 @media (max-width: 768px) {
   .ribbon-content {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    font-size: 1.2rem;
     gap: 8px;
-    font-size: 1.25rem;
   }
 
   .ribbon-content > * {
-    flex: 0 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  .name, .role {
-    line-height: 1.2;
+  .name {
+    max-width: 50%;
+  }
+
+  .role {
+    max-width: 40%;
+    text-align: right;
   }
 
   .divider {
-    align-self: center;
-    font-size: 1.25rem;
-    opacity: 0.4;
+    flex-shrink: 0;
   }
 }
+
