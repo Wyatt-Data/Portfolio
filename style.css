@@ -16,11 +16,25 @@ html, body {
   box-sizing: inherit; /* Make all elements respect border-box */
 }
 
-header {
-  background: #222;
+/* Ribbon Header */
+.ribbon-header {
+  background: linear-gradient(135deg, #0077b6, #023e8a); /* Blue gradient */
   color: #fff;
-  text-align: center;
-  padding: 1em 0;
+  padding: 20px 40px;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%); /* angled end */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ribbon-content {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  gap: 12px;
+}
+
+.ribbon-content .divider {
+  opacity: 0.5;
 }
 
 .main-content {
