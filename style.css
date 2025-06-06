@@ -202,10 +202,14 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
+  .ribbon-header {
+    padding: 12px 16px;
+  }
+
   .ribbon-content {
     flex-wrap: nowrap;
-    font-size: 1.2rem;
-    gap: 8px;
+    font-size: 1rem;
+    gap: 6px;
   }
 
   .ribbon-content > * {
@@ -214,17 +218,15 @@ footer a:hover {
     text-overflow: ellipsis;
   }
 
-  .name {
-    max-width: 50%;
-  }
-
-  .role {
-    max-width: 40%;
-    text-align: right;
+  .name, .role {
+    flex: 1 1 auto;
+    text-align: left;
   }
 
   .divider {
     flex-shrink: 0;
+    opacity: 0.4;
+    font-size: 1rem;
   }
 }
 
