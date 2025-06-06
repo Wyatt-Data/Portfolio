@@ -2,8 +2,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scroll */
-  font-family: sans-serif;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f8f8f8;
   color: #333;
   display: flex;
@@ -13,30 +13,35 @@ html, body {
 }
 
 * {
-  box-sizing: inherit; /* Make all elements respect border-box */
+  box-sizing: inherit;
 }
 
 /* Ribbon Header */
 .ribbon-header {
-  background: linear-gradient(135deg, #0077b6, #023e8a); /* Blue gradient */
+  background: linear-gradient(135deg, #003049, #264653);
   color: #fff;
-  padding: 20px 40px;
-  clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%); /* angled end */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 24px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .ribbon-content {
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
-  font-weight: 600;
-  gap: 12px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  gap: 16px;
+  letter-spacing: 0.5px;
 }
 
 .ribbon-content .divider {
-  opacity: 0.5;
+  opacity: 0.4;
+  font-size: 1.5rem;
 }
 
+/* Main Content */
 .main-content {
   flex: 1;
   max-width: 1000px;
@@ -54,9 +59,8 @@ html, body {
   align-items: center;
 }
 
-/* Slideshow Container */
 .photo-slideshow {
-  flex: 0 0 400px; /* Do not shrink below 400px */
+  flex: 0 0 400px;
   max-width: 400px;
   width: 100%;
   position: relative;
@@ -98,13 +102,11 @@ html, body {
   background-color: #fff;
 }
 
-/* Bio Section */
 .bio {
   flex: 1 1 0;
   min-width: 0;
 }
 
-/* Force Stack When < 840px (photo + gap + bio) */
 @media (max-width: 840px) {
   .top-section {
     flex-direction: column;
@@ -155,7 +157,7 @@ html, body {
   font-size: 1.2rem;
 }
 
-/* Bottom */
+/* Bottom Section */
 .bottom-section {
   background: white;
   padding: 20px;
@@ -182,15 +184,19 @@ html, body {
 
 /* Footer */
 footer {
-  background: #222;
-  color: #fff;
+  background: #003049;
+  color: #ffffff;
   text-align: center;
-  padding: 1em 0;
-  width: 100%;
-  box-sizing: border-box;
+  padding: 16px 0;
+  font-size: 0.95rem;
+  border-top: 4px solid #66ccff;
 }
 
 footer a {
   color: #66ccff;
   text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
