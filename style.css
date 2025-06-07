@@ -160,9 +160,11 @@ html, body {
 
 .education {
   display: flex;
+  justify-content: center; /* centers the cards container */
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 20px;
+  text-align: left; /* ensures internal text stays left-aligned */
 }
 
 .education .card {
