@@ -176,6 +176,11 @@ html, body {
   transition: none;
 }
 
+.education .card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
 a {
   color: #0077b6;
   text-decoration: none;
