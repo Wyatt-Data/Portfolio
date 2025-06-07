@@ -195,14 +195,18 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+.bottom-section p,
 .bottom-section ul {
-  list-style: none;
+  margin: 0 0 1rem 0; /* consistent bottom margin for paragraphs and lists */
   padding-left: 0;
+  list-style: none;
 }
 
 .bottom-section ul li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem; /* same spacing as paragraphs */
+  line-height: 1.5;
 }
+
 
 /* Footer */
 footer {
