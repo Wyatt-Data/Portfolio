@@ -1,132 +1,232 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wyatt Williams Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+/* General Layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f8f8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
 
-  <header class="ribbon-header">
-    <div class="ribbon-content">
-      <span class="name">Wyatt Williams</span>
-      <span class="divider">|</span>
-      <span class="role">Data Scientist</span>
-    </div>
-  </header>
+* {
+  box-sizing: inherit;
+}
 
-  <main class="main-content">
-    <div class="top-section">
-      <div class="photo-slideshow">
-        <div class="slides-wrapper">
-          <img src="images/hackathon.jpg" class="slide active" alt="hackathon" />
-          <img src="images/ghibli.jpg" class="slide" alt="ghibli" />
-          <img src="images/piano.jpg" class="slide" alt="piano" />
-          <img src="images/trailrunning.jpg" class="slide" alt="trailrunning" />
-          <img src="images/hobbies.jpg" class="slide" alt="hobbies" />
-        </div>
-      </div>
+/* Ribbon Header */
+.ribbon-header {
+  background: linear-gradient(135deg, #003049, #264653);
+  color: #fff;
+  padding: 24px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
 
-      <div class="bio">
-        <h2>About Me</h2>
-        <p>I’m a data scientist with a strong foundation in business strategy, specializing in transforming complex data into actionable insights that drive operational efficiency and informed decision-making. With expertise in natural language processing, machine learning, and predictive modeling, I build tools and workflows that help organizations make smarter, faster decisions.</p>
-        <p>My background includes experience in analytics instruction, technical support, and applied consulting, delivering measurable results across industries. I’m skilled in Python, RStudio, SQL, Excel, Tableau, and Power BI, and I thrive at the intersection of technical rigor and business impact.</p>
-        <p>I’m especially passionate about making data accessible and turning raw inputs into clear narratives that empower teams. Outside of work, you’ll find me playing the piano, running trails, practicing yoga, or watching international films.</p>
-      </div>
-    </div>
+.ribbon-content {
+  display: flex;
+  align-items: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  gap: 16px;
+  letter-spacing: 0.5px;
+}
 
-    <section class="projects-section">
-      <h2>Projects & Accomplishments</h2>
-      <div class="cards">
-        <div class="card">
-          <h3><a href="https://github.com/Wyatt-Data/LDS-GeneralConference" target="_blank" rel="noopener noreferrer">Text Summarization</a></h3>
-          <p>Developed a Streamlit website using web-scraping and NLP techniques to summarize lengthy articles</p>
-        </div>
-        <div class="card">
-          <h3><a href="https://github.com/Wyatt-Data/Movie-Similarity" target="_blank" rel="noopener noreferrer">Movie Maturity</a></h3>
-          <p>Built an interactive movie similarity search engine using APIs, document clustering, and text summarization </p>
-        </div>
-        <div class="card">
-          <h3><a href="https://github.com/Wyatt-Data/Wordle-Solver" target="_blank" rel="noopener noreferrer">Wordle Solver</a></h3>
-          <p>Incorporated statistical analysis and pattern recognition to generate best word guesses in Wordle</p>
-        </div>
-      </div>
+.ribbon-content .divider {
+  opacity: 0.4;
+  font-size: 1.5rem;
+}
 
-    <div class="bottom-section">
-      <h2>What I Do</h2>
-      <ul>
-        <li><strong>Machine Learning:</strong> Developed time-series models and deployed forecasts via dashboards.</li>
-        <li><strong>NLP:</strong> Used NLP techniques to analyze and visualize user behavior.</li>
-        <li><strong>Instructor Impact:</strong> Taught 50+ professionals across multiple industries in BI tools and SQL.</li>
-      </ul>
-    </div>
+/* Main Content */
+.main-content {
+  flex: 1;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
 
-    <section class="projects-section">
-      <h2>Skills</h2>
-      <div class="cards">
-        <div class="card">
-          <h3><a href="https://github.com/Wyatt-Data/LDS-GeneralConference" target="_blank" rel="noopener noreferrer">Text Summarization</a></h3>
-          <p>Developed a Streamlit website using web-scraping and NLP techniques to summarize lengthy articles</p>
-        </div>
-        <div class="card">
-          <h3><a href="https://github.com/Wyatt-Data/Movie-Similarity" target="_blank" rel="noopener noreferrer">Movie Maturity</a></h3>
-          <p>Built an interactive movie similarity search engine using APIs, document clustering, and text summarization </p>
-        </div>
-        <div class="card">
-          <h3><a href="https://github.com/Wyatt-Data/Wordle-Solver" target="_blank" rel="noopener noreferrer">Wordle Solver</a></h3>
-          <p>Incorporated statistical analysis and pattern recognition to generate best word guesses in Wordle</p>
-        </div>
-      </div>
-    </section>
+/* Top Section */
+.top-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+  align-items: center;
+}
 
-    <div class="bottom-section">
-      <h2>Experience</h2>
-      <ul>
-        <li><strong>Data Analytics Instructor:</strong> Developed time-series models and deployed forecasts via dashboards.</li>
-        <li><strong>Entrepreunial Consultant:</strong> Used NLP techniques to analyze and visualize user behavior.</li>
-        <li><strong>Instructor Impact:</strong> Taught 50+ professionals across multiple industries in BI tools and SQL.</li>
-        <li>See my work: <a href="https://github.com/Wyatt-Data" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/wyatt-williams-data/" target="_blank">LinkedIn</a></li>
-      </ul>
-    </div>
+.photo-slideshow {
+  flex: 0 0 400px;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 3;
+}
 
-    <section class="projects-section">
-      <h2>Volunteer & Leadership</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>USU Hackathon Judge</h3>
-          <p>Evaluated innovative solutions developed by student teams from multiple universities at the USU hackathon in the AI and ML category</p>
-        </div>
-        <div class="card">
-          <h3>For the Strength of Youth</h3>
-          <p>Managed a team of 100 counselors who were responsible for approximately 1,000 youth over the summer. Devoted 100+ hours a week ensuring everything ran smoothly for summer camp activities across three states</p>
-        </div>
-        <div class="card">
-          <h3>Alumni Fundraiser</h3>
-          <p>Played Liebestrum by Franz Listz at a fundraiser for the annual Crawford Cup competition</p>
-        </div>
-      </div>
-    </section>
-          
-    <div class="bottom-section">
-      <h2>Get in Touch</h2>
-      <ul>
-        I would love to get in touch and help share my skills with you. Please reach out on LinkedIn by sending me a connection request and message me. 
-        <li>See my work: <a href="https://github.com/Wyatt-Data" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/wyatt-williams-data/" target="_blank">LinkedIn</a></li>
-      </ul>
-    </div>
-      
-    </section>
-    
-    </main>
+.slides-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 
-  <footer>
-    <p>
-      <a href="https://www.linkedin.com/in/wyatt-williams-data/" target="_blank">LinkedIn</a> |
-      &copy; 2025 Wyatt Williams
-    </p>
-  </footer>
+.slide {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 2s ease-in-out;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+.slide.active {
+  display: block;
+  z-index: 1;
+  opacity: 1;
+}
+
+.slide img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background-color: #fff;
+}
+
+.bio {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+@media (max-width: 840px) {
+  .top-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .photo-slideshow {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .bio {
+    width: 100%;
+  }
+}
+
+/* Projects Section */
+.projects-section {
+  margin-top: 60px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 1;
+  min-width: 250px;
+  background: white;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* Bottom Section */
+.bottom-section {
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+}
+
+.bottom-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.bottom-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.bottom-section li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  background: #003049;
+  color: #ffffff;
+  text-align: center;
+  padding: 16px 0;
+  font-size: 0.95rem;
+  border-top: 4px solid #66ccff;
+}
+
+footer a {
+  color: #66ccff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .ribbon-header {
+    padding: 12px 16px;
+  }
+
+  .ribbon-content {
+    flex-wrap: nowrap;
+    font-size: 1rem;
+    gap: 6px;
+  }
+
+  .ribbon-content > * {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .name, .role {
+    flex: 1 1 auto;
+    text-align: left;
+  }
+
+  .divider {
+    flex-shrink: 0;
+    opacity: 0.4;
+    font-size: 1rem;
+  }
+}
