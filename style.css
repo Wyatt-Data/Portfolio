@@ -95,13 +95,6 @@ html, body {
   opacity: 1;
 }
 
-.slide img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  background-color: #fff;
-}
-
 .bio {
   flex: 1 1 0;
   min-width: 0;
