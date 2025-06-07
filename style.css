@@ -170,12 +170,20 @@ html, body {
 .education .card {
   flex: 1;
   min-width: 250px;
-  background: none;
-  margin-top: 10px;
-  padding: 0;
+  background: transparent;
+  padding: 20px;
   border-radius: 0;
   box-shadow: none;
-  transition: none;
+
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically if needed */
+  text-align: left;
+}
+
+.card-content {
+  display: inline-block;
+  text-align: left;
 }
 
 .education .card:hover {
