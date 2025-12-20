@@ -83,9 +83,8 @@ html, body {
   width: 100%;
   height: auto;            /* keep aspect ratio */
   max-width: 400px;        /* optional: limit size */
-  border-radius: 50%;      /* makes it a circle */
   display: block;
-  object-fit: cover;       /* crop any overflow */
+  object-fit: contain;      
   object-position: center;
   transition: opacity 2s ease-in-out;
 }
